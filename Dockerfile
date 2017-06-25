@@ -1,4 +1,4 @@
-FROM acusensehub/scikit-opencv:py-2.7
+FROM datmo/scikit-opencv:py-2.7
 
 VOLUME ["/home/_data", "/home/_inputs", "/home/_shared_outputs", "/home/src", "/home/_snapshots"]
 
