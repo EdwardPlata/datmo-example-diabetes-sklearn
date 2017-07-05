@@ -1,0 +1,9 @@
+2017-07-05 07:31:11,292 - Traceback (most recent call last):
+2017-07-05 07:31:11,293 - File "regression.py", line 50, in <module>
+2017-07-05 07:31:11,293 - model_filename = os.path.join(os.environ['OUTPUT_DIR'],'model.pkl')
+2017-07-05 07:31:11,293 - File "/usr/lib/python2.7/UserDict.py", line 23, in __getitem__
+2017-07-05 07:31:11,293 - ('Coefficients: \n', 938.23786125126298)
+2017-07-05 07:31:11,293 - Mean squared error: 2548.07
+2017-07-05 07:31:11,293 - Variance score: 0.47
+2017-07-05 07:31:11,294 - raise KeyError(key)
+2017-07-05 07:31:11,294 - KeyError: 'OUTPUT_DIR'

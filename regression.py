@@ -6,8 +6,8 @@ import numpy as np
 import cPickle
 import os
 import json
+import pickle
 from sklearn import datasets, linear_model
-from scikit_checkpoint import ScikitCheckpoint
 
 # Load the diabetes dataset
 diabetes = datasets.load_diabetes()
@@ -46,8 +46,12 @@ print('Variance score: %.2f' % variance_score)
 
 # save the classifier
 stats = {"mse": mse,"variance_score":variance_score}
-checkpoint = ScikitCheckpoint(os.environ['OUTPUT_DIR'], )
-checkpoint.save_model(regr, stats)
+
+model_filename = os.path.join(os.environ['OUTPUT_DIR'],'model.pkl')
+pickle.dump(regr, open(model_filename, 'wb'))
+stats_filename = os.path.join(os.environ['OUTPUT_DIR'],'stats.json')
+with open(stats_filename, 'wb') as f:
+    f.write(json.dumps(stats))
 
 # Plot outputs
 plt.scatter(diabetes_X_test, diabetes_y_test,  color='black')
