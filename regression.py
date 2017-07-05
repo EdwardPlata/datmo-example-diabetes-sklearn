@@ -46,7 +46,7 @@ print('Variance score: %.2f' % variance_score)
 
 # save the classifier
 stats = {"mse": mse,"variance_score":variance_score}
-checkpoint = ScikitCheckpoint(os.environ['SNAPSHOTS_DIR'], )
+checkpoint = ScikitCheckpoint(os.environ['OUTPUT_DIR'], )
 checkpoint.save_model(regr, stats)
 
 # Plot outputs
@@ -57,4 +57,4 @@ plt.plot(diabetes_X_test, regr.predict(diabetes_X_test), color='blue',
 plt.xticks(())
 plt.yticks(())
 
-plt.savefig(os.environ['SHARED_OUTPUT_DIR']+'/performance.png')
+plt.savefig(os.environ['OUTPUT_DIR']+'/performance.png')
