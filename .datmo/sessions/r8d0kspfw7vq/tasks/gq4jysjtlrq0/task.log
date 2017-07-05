@@ -1,4 +1,0 @@
-2017-07-05 07:26:25,154 - Traceback (most recent call last):
-2017-07-05 07:26:25,154 - File "regression.py", line 10, in <module>
-2017-07-05 07:26:25,154 - from scikit_checkpoint import ScikitCheckpoint
-2017-07-05 07:26:25,154 - ImportError: No module named scikit_checkpoint
