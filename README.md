@@ -1,4 +1,4 @@
-[![Datmo Model](http://preview.datmo.io/shabazp/diabetes-classification/badge.svg)](http://preview.datmo.io/shabazp/diabetes-classification)
+[![Datmo Model](https://preview.datmo.io/shabazp/diabetes-classification/badge.svg)](http://preview.datmo.io/shabazp/diabetes-classification)
 
 # model-sklearn-workflow
 
