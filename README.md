@@ -4,7 +4,7 @@
 
 This is an example of a Datmo model which uses a dataset of patient attributes and predicts the likelihood of a patient having diabetes
 
-You can take a look at the Dataset details [here](http://scikit-learn.org/stable/datasets/index.html#datasets) 
+You can take a look at the Dataset details [here](http://scikit-learn.org/stable/datasets/index.html#diabetes-dataset) 
 
 Check out the Snapshots tab for information on snapshots that were taken with various parameters. Search and filter them to find the best ones. 
 
