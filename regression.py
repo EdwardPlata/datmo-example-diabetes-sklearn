@@ -47,7 +47,7 @@ print('Variance score: %.2f' % variance_score)
 # save the classifier
 stats = {"mse": mse,"variance_score":variance_score}
 
-model_filename = os.path.join(os.environ['OUTPUT_DIR'],'model.pkl')
+model_filename = os.path.join(os.environ['OUTPUT_DIR'],'model.dat')
 pickle.dump(regr, open(model_filename, 'wb'))
 stats_filename = os.path.join(os.environ['OUTPUT_DIR'],'stats.json')
 with open(stats_filename, 'wb') as f:
