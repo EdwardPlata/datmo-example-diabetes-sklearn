@@ -16,7 +16,7 @@ diabetes = datasets.load_diabetes()
 # Use only one feature
 diabetes_X = diabetes.data[:, np.newaxis, 2]
 
-with open(os.environ['INPUT_DIR']+'/config.json') as f:
+with open('config.json') as f:
      config = json.load(f)
 
 # Split the data into training/testing sets
@@ -47,9 +47,9 @@ print('Variance score: %.2f' % variance_score)
 # save the classifier
 stats = {"mse": mse,"variance_score":variance_score}
 
-model_filename = os.path.join(os.environ['OUTPUT_DIR'],'model.dat')
+model_filename = os.path.join(os.environ['DATMO_TASK_DIR'],'model.dat')
 pickle.dump(regr, open(model_filename, 'wb'))
-stats_filename = os.path.join(os.environ['OUTPUT_DIR'],'stats.json')
+stats_filename = os.path.join(os.environ['DATMO_TASK_DIR'],'stats.json')
 with open(stats_filename, 'wb') as f:
     f.write(json.dumps(stats))
 
@@ -61,4 +61,4 @@ plt.plot(diabetes_X_test, regr.predict(diabetes_X_test), color='blue',
 plt.xticks(())
 plt.yticks(())
 
-plt.savefig(os.environ['OUTPUT_DIR']+'/performance.png')
+plt.savefig(os.environ['DATMO_TASK_DIR']+'/performance.png')

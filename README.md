@@ -1,6 +1,6 @@
 # Diabetes Classification with Scikit-Learn
 
-[![Datmo Model](https://datmo.io/shabazp/diabetes-classification/badge.svg)](https://datmo.io/shabazp/diabetes-classification)
+[![Datmo Model](https://datmo.com/shabazp/diabetes-classification/badge.svg)](https://datmo.com/shabazp/diabetes-classification)
 
 This is an example of a [Datmo](https://datmo.com) model which uses a dataset of patient attributes and predicts the likelihood of a patient having diabetes
 
@@ -8,12 +8,11 @@ You can take a look at the Dataset details [here](http://scikit-learn.org/stable
 
 Check out the Snapshots tab above for information on snapshots that were taken with various parameters. Search and filter them to find the best ones. 
 
-(Coming soon) Click on the "Deploy" button next to the relevant snapshot to create an API on the server the Agent is running on or use the deploy command in the CLI to deploy it as a RESTful API. 
 
 Clone this model on your local machine with the Datmo CLI
 
 ```
-$ datmo clone https://datmo.io/shabazp/diabetes-classification
+$ datmo clone shabazp/diabetes-classification
 ```
 
 Now you can run the set of commands below to better understand the advantages of converting a repository to a Datmo model. 
@@ -33,13 +32,7 @@ For reference, here are few more quick details about what you can find in the re
 
 ```
 Dockerfile: this is meant to keep track of your environment. For example, this Dockerfile ensures that our environment has all of the requirements needed to run our model. You can manage, edit, and create new enviroments with the datmo env command. Each session you create with datmo will have a default environment associated with it.
-
-_datmo: visible datmo folder where the input information (data, snapshots, misc files) will go.
-
-_datmo/data: we store any data that you might use for the model. In this case, we are pulling data from a remote server and will populate this directory automatically while training. For other models, you will want to use the datmo dataset command to create, manage, or pull datasets from the remote server
-
-_datmo/snapshots: contains weights, statistics and files(visualizations) that are pulled in to be inputs for processing
 ```
-The commands and quick reference above is by no means meant to be comprehensive. Please refer to the [CLI documentation](https://beta-docs.datmo.io) for more details on the various Datmo commands to use and file structures present in Datmo.
+The commands and quick reference above is by no means meant to be comprehensive. Please refer to the [CLI documentation](https://docs.datmo.com) for more details on the various Datmo commands to use and file structures present in Datmo.
 
 Happy Building :)
