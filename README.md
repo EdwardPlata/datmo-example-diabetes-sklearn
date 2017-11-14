@@ -15,17 +15,21 @@ Clone this model on your local machine with the Datmo CLI
 $ datmo clone shabazp/diabetes-classification
 ```
 
-Now you can run the set of commands below to better understand the advantages of converting a repository to a Datmo model. 
-First you can check out all of the snapshots that have already been created by the user. 
+First you can check out all of the snapshots that have already been created by the user. This is equivalent to checking out the snapshots tab on Datmo except without the search and filter capabilities available on the GUI.
 
 ```
 $ datmo snapshot ls 
 ```
 
-Once you have viewed all of the existing snapshots, you can create your own by simply running the code below which runs the regression training which saves a few key files (the weights file, metrics for this file, and ) in the output directory which creates a new snapshot. 
+Once you have viewed all of the existing snapshots, you can start by running an experiment by simply running the code below which runs the fraud detection training code. 
 
 ```
 $ datmo task run "python regression.py"
+```
+
+Create your first snapshot, by running the following command 
+```
+$ datmo snapshot create -m "my first snapshot"
 ```
 
 For reference, here are few more quick details about what you can find in the repository. 
